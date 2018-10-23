@@ -1,0 +1,10 @@
+node_modules/
+website/
+.idea/
+yarn-error.log
+.DS_Store
+dist/
+.env
+npm-debug.log
+webpack.config.js
+server/github-signup.js

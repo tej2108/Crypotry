@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app/:rw
+    links:
+      - mongo
+    command: >
+      sh -c '
+      if test -d node_modules;
+      then
+        echo node_modules_exists ;
+      else
+        cp -a /tmp/node_modules /usr/src/app/website;
+      fi &&
+      yarn install && yarn run server
+      '
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"

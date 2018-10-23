@@ -1,0 +1,39 @@
+.navbar{
+    height: 100%;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-rows: 100px 1fr auto;
+    justify-content: space-evenly;
+    color: black;
+    padding: 10px;
+}
+
+.pageLayout{
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    overflow: hidden;
+
+}
+.navProfile{
+    height:100%;
+    display: flex;
+    justify-self: left;
+}
+.navProfileText{
+    margin: 0 10px;
+    text-align: left;
+}
+.navProfile > img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.myWallet {
+    margin: 10px;
+
+}
